@@ -102,6 +102,7 @@ main {
 
             #about,
             #resume,
+            #projects,
             #contacts {
                 padding: 0 10%;
                 display: flex;
@@ -118,6 +119,40 @@ main {
                     display: flex;
                     justify-content: space-around;
                     gap: 10px 50px;
+                }
+            }
+
+            #projects {
+                ul {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                    list-style: none;
+
+                    .link-box {
+                        width: 100%;
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        background-color: var(--secondary-color);
+                        color: var(--text-color);
+                        border-radius: 5px;
+                        padding: 1%;
+
+                        &:hover {
+                            background-color: var(--text-color);
+                            color: var(--primary-color);
+                        }
+
+                        img {
+                            padding: 0.5%;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 20%;
+                        }
+                    }
                 }
             }
 

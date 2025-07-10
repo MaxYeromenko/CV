@@ -46,6 +46,7 @@ body {
 body a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 header {
@@ -269,6 +270,7 @@ main .left-side .sections-content {
 }
 main .left-side .sections-content #about,
 main .left-side .sections-content #resume,
+main .left-side .sections-content #projects,
 main .left-side .sections-content #contacts {
   padding: 0 10%;
   display: -webkit-box;
@@ -295,6 +297,40 @@ main .left-side .sections-content #about .languages-interests {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: 10px 50px;
+}
+main .left-side .sections-content #projects ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  list-style: none;
+}
+main .left-side .sections-content #projects ul .link-box {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 1%;
+}
+main .left-side .sections-content #projects ul .link-box:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+}
+main .left-side .sections-content #projects ul .link-box img {
+  padding: 0.5%;
+  width: 20px;
+  height: 20px;
+  border-radius: 20%;
 }
 main .left-side .sections-content #contacts p {
   width: 100%;

@@ -3,12 +3,14 @@ const leftSide = document.querySelector(".left-side");
 const briefInfo = document.querySelector(".brief-info");
 
 function reorderOnResize() {
-    if (window.outerWidth < 830) {
+    const width = window.innerWidth;
+
+    if (width < 830) {
         briefInfo.insertAdjacentElement("afterend", rightSide);
     } else {
         leftSide.insertAdjacentElement("afterend", rightSide);
     }
-    if (window.outerWidth >= 410) {
+    if (width >= 410) {
         burgerSections.classList.add("hidden");
     }
 }
