@@ -5,12 +5,12 @@ const briefInfo = document.querySelector(".brief-info");
 function reorderOnResize() {
     const width = window.innerWidth;
 
-    if (width < 830) {
+    if (width < 960) {
         briefInfo.insertAdjacentElement("afterend", rightSide);
     } else {
         leftSide.insertAdjacentElement("afterend", rightSide);
     }
-    if (width >= 410) {
+    if (width >= 480) {
         burgerSections.classList.add("hidden");
     }
 }
