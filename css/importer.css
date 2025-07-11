@@ -330,6 +330,7 @@ main .left-side .sections-content #projects ul .link-box img {
   padding: 0.5%;
   width: 20px;
   height: 20px;
+  background-color: var(--primary-color);
   border-radius: 20%;
 }
 main .left-side .sections-content #contacts p {
