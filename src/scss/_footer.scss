@@ -1,0 +1,22 @@
+footer {
+    margin-top: 3%;
+    padding: 0 5%;
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--thirdly-color);
+    box-shadow: -1px -1px 5px var(--thirdly-color);
+
+    .social {
+        i {
+            transition: all ease 0.3s;
+
+            &:hover {
+                color: var(--quaternary-color);
+                scale: 125%;
+            }
+        }
+    }
+}

@@ -50,7 +50,7 @@ body a {
 }
 
 header {
-  min-height: 8vh;
+  min-height: 10vh;
   width: 100%;
   background-color: var(--thirdly-color);
   -webkit-box-shadow: 1px 1px 5px var(--thirdly-color);
@@ -154,7 +154,7 @@ main {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-main .button, main .left-side #to-top {
+main .button, main .right-side #to-top {
   padding: 1.5%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -174,15 +174,43 @@ main .button, main .left-side #to-top {
   cursor: pointer;
   text-decoration: none;
 }
-main .button:hover, main .left-side #to-top:hover {
+main .button:hover, main .right-side #to-top:hover {
   color: var(--primary-color);
   background-color: var(--text-color);
   -webkit-transform: scale(1.025);
       -ms-transform: scale(1.025);
           transform: scale(1.025);
 }
-main .button:active, main .left-side #to-top:active {
+main .button:active, main .right-side #to-top:active {
   background-color: var(--quaternary-color);
+}
+main .link-box {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border-radius: 5px;
+  padding: 1%;
+}
+main .link-box:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+}
+main .link-box img {
+  padding: 0.5%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius: 20%;
 }
 main .left-side,
 main .right-side {
@@ -203,22 +231,6 @@ main .right-side {
 }
 main .left-side {
   position: relative;
-}
-main .left-side #to-top {
-  display: none;
-  padding: 0;
-  width: 3.25%;
-  aspect-ratio: 1/1;
-  position: fixed;
-  left: 46%;
-  bottom: 1.2%;
-  color: var(--primary-color);
-  background-color: var(--text-color);
-  border-radius: 100%;
-}
-main .left-side #to-top:hover {
-  color: var(--text-color);
-  background-color: var(--thirdly-color);
 }
 main .left-side .brief-info,
 main .left-side .sections-content {
@@ -305,34 +317,6 @@ main .left-side .sections-content #projects ul {
   gap: 1rem;
   list-style: none;
 }
-main .left-side .sections-content #projects ul .link-box {
-  width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  border-radius: 5px;
-  padding: 1%;
-}
-main .left-side .sections-content #projects ul .link-box:hover {
-  background-color: var(--text-color);
-  color: var(--primary-color);
-}
-main .left-side .sections-content #projects ul .link-box img {
-  padding: 0.5%;
-  width: 20px;
-  height: 20px;
-  background-color: var(--primary-color);
-  border-radius: 20%;
-}
 main .left-side .sections-content #contacts p {
   width: 100%;
   display: -webkit-box;
@@ -356,6 +340,22 @@ main .right-side {
   top: 0;
   left: 0;
   background-color: var(--secondary-color);
+}
+main .right-side #to-top {
+  display: none;
+  padding: 0;
+  width: 3.25%;
+  aspect-ratio: 1/1;
+  position: fixed;
+  right: 46%;
+  bottom: 1.2%;
+  color: var(--primary-color);
+  background-color: var(--text-color);
+  border-radius: 100%;
+}
+main .right-side #to-top:hover {
+  color: var(--text-color);
+  background-color: var(--thirdly-color);
 }
 main .right-side img {
   width: 40%;
@@ -399,27 +399,36 @@ main .right-side .download-buttons .buttons-option {
   main .left-side > hr:first-of-type {
     border-top: 0;
   }
-  main .left-side #to-top {
-    width: 6.5%;
-  }
   main .right-side {
     position: static;
+  }
+  main .right-side #to-top {
+    width: 6.5%;
   }
 }
 footer {
   margin-top: 3%;
-  min-height: 8vh;
+  padding: 0 5%;
+  min-height: 10vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--thirdly-color);
   -webkit-box-shadow: -1px -1px 5px var(--thirdly-color);
           box-shadow: -1px -1px 5px var(--thirdly-color);
+}
+footer .social i {
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+footer .social i:hover {
+  color: var(--quaternary-color);
+  scale: 125%;
 }
