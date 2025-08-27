@@ -424,11 +424,20 @@ footer {
   -webkit-box-shadow: -1px -1px 5px var(--thirdly-color);
           box-shadow: -1px -1px 5px var(--thirdly-color);
 }
-footer .social i {
+footer .social-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+footer .social-container .social i {
   -webkit-transition: all ease 0.3s;
   transition: all ease 0.3s;
 }
-footer .social i:hover {
+footer .social-container .social i:hover {
   color: var(--quaternary-color);
   scale: 125%;
 }
