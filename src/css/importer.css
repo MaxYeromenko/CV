@@ -310,6 +310,12 @@ main .left-side .sections-content #about .languages-interests {
       justify-content: space-around;
   gap: 10px 50px;
 }
+main .left-side .sections-content #about .languages-interests a {
+  text-decoration: underline;
+}
+main .left-side .sections-content #about .languages-interests a:hover {
+  color: var(--quaternary-color);
+}
 main .left-side .sections-content #projects ul {
   width: 100%;
   display: grid;
